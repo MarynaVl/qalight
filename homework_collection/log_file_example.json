@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2022-07-29T02:03:45.293Z",
+    "message": "User Jane.Doe has logged in",
+    "success": true,
+    "log": {
+      "level": "info",
+      "file": "auth.c",
+      "line": 66
+    },
+    "user": {
+      "name": "jane.doe",
+      "id": 235
+    }
+  },
+  {
+    "timestamp": "2022-07-29T02:03:45.293Z",
+    "message": "User Mike.Like has logged in",
+    "success": true,
+    "log": {
+      "level": "info",
+      "file": "auth.c",
+      "line": 68
+    },
+    "user": {
+      "name": "mike.like",
+      "id": 220
+    }
+  },
+  {
+    "timestamp": "2022-07-29T02:03:45.293Z",
+    "message": "User John.Smith has logged in",
+    "success": false,
+    "log": {
+      "level": "info",
+      "file": "auth.c",
+      "line": 60
+    },
+    "user": {
+      "name": "john.smith",
+      "id": 210
+    }
+  }
+]
