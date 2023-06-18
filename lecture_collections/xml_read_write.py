@@ -1,4 +1,3 @@
-import json
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
 
@@ -49,6 +48,30 @@ def write_xml(filename: str, data: dict) -> None:
 
 def print_xml(filename: str) -> None:
     document = minidom.parse(filename)
-    print(document)
+    print(document.toxml())
 
-print()
+
+def print_xml_data(filename: str):
+    tree = ET.parse(filename)
+    root = tree.getroot()
+    for child in root:
+        print(child.tag, child.attrib)
+        for sub_child in child:
+            print(sub_child.tag, sub_child.text)
+
+
+def print_xml_data_element(element):
+    print(element.tag, element.attrib)
+    for child in element:
+        print(child.tag, child.text)
+        print_xml_data(child)
+
+
+def traverse_xml(filename):
+    tree = ET.parse(filename)
+    root = tree.getroot()
+    print_xml_data(root)
+
+
+# Example usage
+traverse_xml('my_users.xml')
