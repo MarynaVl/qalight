@@ -1,5 +1,6 @@
 import pytest
-from demoqa_collection.pages.page_check_box import PageCheckBox
+
+from demoqa_collection.elements.pages.page_check_box import PageCheckBox
 
 
 @pytest.mark.usefixtures('chrome')
