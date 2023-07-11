@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -15,6 +17,7 @@ class PageDynamicProperties:
         self.enable_disable_button_loc = By.CSS_SELECTOR, '#enableAfter'
         self.change_color_button_loc = By.CSS_SELECTOR, '#colorChange'
         self.appear_button_loc = By.CSS_SELECTOR, '#visibleAfter'
+        self.change_color_text_danger = By.CSS_SELECTOR, '#colorChange.text-danger'
 
     def open(self) -> 'PageDynamicProperties':
         self.driver.get(self.url)
@@ -38,5 +41,6 @@ class PageDynamicProperties:
             self.driver, timeout=6).until(
             ec.visibility_of_element_located(self.appear_button_loc))
 
-    def wait(self, *args):
-        pass
+    def wait_for_text_danger(self):
+        return WebDriverWait(self.driver, timeout=6).until(
+            ec.presence_of_element_located(self.change_color_text_danger))
