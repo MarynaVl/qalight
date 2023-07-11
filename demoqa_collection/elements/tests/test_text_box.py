@@ -1,8 +1,7 @@
 import pytest
 from selenium.common import NoSuchElementException
 
-from demoqa_collection.pages.page_text_box import PageTextBox
-
+from demoqa_collection.elements.pages.page_text_box import PageTextBox
 
 user_data = {'fullname': 'Halyna Petrenko',
              'email': 'halyna@mail.com',

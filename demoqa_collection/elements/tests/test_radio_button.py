@@ -1,5 +1,6 @@
 import pytest
-from demoqa_collection.pages.page_radio_button import PageRadioButton
+
+from demoqa_collection.elements.pages.page_radio_button import PageRadioButton
 
 
 @pytest.mark.usefixtures('chrome')
