@@ -20,3 +20,9 @@ class PageBookStoreUsers:
         assert status == 201
         new_user = json.loads(response.content)
         return {'name': new_user.get('username'), 'id': new_user.get('userID')}
+
+    def delete_user(self, his_id):
+        custom_user_url = self.URL + self.END_POINT + f'/{his_id}'
+        response = requests.delete(url=custom_user_url)
+        print(response.content)
+

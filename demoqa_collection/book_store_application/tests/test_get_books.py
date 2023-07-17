@@ -1,6 +1,4 @@
 import json
-from pprint import pprint
-
 from demoqa_collection.book_store_application.pages.page_book_store_api import PageBookStore
 
 
@@ -16,8 +14,3 @@ class TestGetBooks:
             for author in authors:
                 print(author)
         assert len(authors) == 8
-
-
-    def test_(self):
-        page = PageBookStore()
-        pass
