@@ -16,7 +16,7 @@ print(list1)
 list1[1] = 5
 print(list1)
 
-list1.pop(2)
+del list[2]
 print(list1)
 
 list2: list = [2, 11, 3, 13, 4, 33]
